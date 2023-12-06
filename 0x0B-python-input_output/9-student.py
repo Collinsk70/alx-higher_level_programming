@@ -1,6 +1,6 @@
 
 #!/usr/bin/python3
-"""Module defining the class Student based on 9-student.py"""
+"""Module defining the class Student"""
 
 
 class Student:
@@ -24,23 +24,10 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self, attrs=None):
+    def to_json(self):
         """Retrieves a dictionary representation of a Student instance.
-
-        If attrs is a list of strings, only attribute names contained in,
-        this list must be retrieved.
-        Otherwise, all attributes must be retrieved.
 
         Returns:
             dict: dictionary representation.
         """
-        if attrs is None:
-            return self.__dict__
-
-        new_dict = {}
-        for item in attrs:
-            try:
-                new_dict[item] = self.__dict__[item]
-            except Exception:
-                pass
-        return new_dict
+        return self.__dict__

@@ -1,5 +1,5 @@
-
-dule containing a script that reads stdin line by line and computes,
+#!/usr/bin/python3
+"""Module containing a script that reads stdin line by line and computes,
 metrics
 Each 10 lines and after a keyboard interruption (CTRL + C), prints those,
 statistics since the beginning:
